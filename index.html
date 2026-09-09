@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冒险游戏-热门单机与联机冒险游戏推荐及下载指南</title>
+    <meta name="description" content="探索冒险游戏世界，为您推荐经典与最新的单机冒险、剧情解谜及开放世界冒险游戏，涵盖PC、主机与手机平台，提供全面的游戏评测与入门指南。">
+    <meta name="keywords" content="冒险游戏,单机冒险游戏,开放世界游戏,动作冒险,解谜游戏,游戏推荐,冒险游戏下载">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: #f4f5f7;
+            color: #1f2933;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 顶部导航 */
+        .site-header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e4e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #f97316, #dc2626);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            box-shadow: 0 2px 6px rgba(220, 38, 38, 0.3);
+        }
+
+        .logo-text {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1f2933;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-text span {
+            color: #dc2626;
+        }
+
+        .main-nav ul {
+            display: flex;
+            list-style: none;
+            gap: 28px;
+        }
+
+        .main-nav ul li a {
+            color: #4b5563;
+            font-weight: 500;
+            font-size: 16px;
+            padding: 6px 0;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .main-nav ul li a:hover,
+        .main-nav ul li a.active {
+            color: #dc2626;
+            text-decoration: none;
+            border-bottom-color: #dc2626;
+        }
+
+        .header-search {
+            display: flex;
+            align-items: center;
+            background: #f3f4f6;
+            border-radius: 20px;
+            padding: 5px 5px 5px 15px;
+            width: 240px;
+        }
+
+        .header-search input {
+            border: none;
+            background: transparent;
+            outline: none;
+            width: 100%;
+            font-size: 14px;
+            color: #1f2933;
+        }
+
+        .header-search button {
+            background: #dc2626;
+            border: none;
+            color: white;
+            border-radius: 16px;
+            padding: 5px 15px;
+            font-size: 14px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .header-search button:hover {
+            background: #b91c1c;
+        }
+
+        /* 主视觉 Hero */
+        .hero {
+            background: linear-gradient(105deg, #0f172a 0%, #1e293b 45%, #334155 100%);
+            color: white;
+            padding: 80px 0 70px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            right: -80px;
+            top: -80px;
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(249, 115, 22, 0.3), transparent 70%);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            left: 30%;
+            bottom: -100px;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.3), transparent 70%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 700px;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: rgba(249, 115, 22, 0.2);
+            border: 1px solid rgba(249, 115, 22, 0.5);
+            color: #fdba74;
+            border-radius: 20px;
+            padding: 4px 14px;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            letter-spacing: 0.3px;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            line-height: 1.2;
+            margin-bottom: 18px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #cbd5e1;
+            margin-bottom: 32px;
+            max-width: 600px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: #f97316;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.2s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            background: #ea580c;
+            text-decoration: none;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(249, 115, 22, 0.3);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid #64748b;
+            padding: 10px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.2s ease;
+            display: inline-block;
+        }
+
+        .btn-outline:hover {
+            border-color: white;
+            background: rgba(255, 255, 255, 0.1);
+            text-decoration: none;
+        }
+
+        /* 分类导航卡片 */
+        .category-section {
+            padding: 60px 0 20px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1f2933;
+            margin-bottom: 8px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -6px;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: #f97316;
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            color: #6b7280;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px 16px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+            border: 1px solid #f0f0f0;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+            border-color: #f97316;
+        }
+
+        .category-icon {
+            font-size: 36px;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .category-name {
+            font-weight: 600;
+            font-size: 16px;
+            color: #1f2933;
+        }
+
+        .category-count {
+            font-size: 13px;
+            color: #9ca3af;
+            margin-top: 4px;
+        }
+
+        /* 热门游戏区域 */
+        .featured-section {
+            padding: 50px 0;
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .game-card {
+            background: white;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+            border: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .game-thumbnail {
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: white;
+            position: relative;
+        }
+
+        .thumb-1 { background: linear-gradient(135deg, #1e3a5f, #3b82f6); }
+        .thumb-2 { background: linear-gradient(135deg, #7c2d12, #ea580c); }
+        .thumb-3 { background: linear-gradient(135deg, #14532d, #16a34a); }
+        .thumb-4 { background: linear-gradient(135deg, #4c1d95, #8b5cf6); }
+        .thumb-5 { background: linear-gradient(135deg, #831843, #ec4899); }
+        .thumb-6 { background: linear-gradient(135deg, #1e3a8a, #06b6d4); }
+
+        .game-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+            backdrop-filter: blur(4px);
+        }
+
+        .game-info {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .game-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1f2933;
+            margin-bottom: 6px;
+        }
+
+        .game-meta {
+            display: flex;
+            gap: 12px;
+            font-size: 13px;
+            color: #6b7280;
+            margin-bottom: 10px;
+        }
+
+        .game-meta span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .game-desc {
+            font-size: 14px;
+            color: #4b5563;
+            margin-bottom: 15px;
+            flex: 1;
+            line-height: 1.5;
+        }
+
+        .game-rating {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid #f3f4f6;
+            padding-top: 14px;
+        }
+
+        .rating-stars {
+            color: #f59e0b;
+            font-size: 15px;
+        }
+
+        .rating-score {
+            font-weight: 700;
+            color: #1f2933;
+        }
+
+        /* 更新速递 */
+        .update-section {
+            background: white;
+            padding: 50px 0;
+            border-top: 1px solid #e5e7eb;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .update-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .update-list {
+            list-style: none;
+        }
+
+        .update-item {
+            display: flex;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid #f3f4f6;
+            align-items: flex-start;
+        }
+
+        .update-item:last-child {
+            border-bottom: none;
+        }
+
+        .update-date {
+            background: #f3f4f6;
+            color: #4b5563;
+            border-radius: 8px;
+            padding: 4px 10px;
+            font-size: 13px;
+            white-space: nowrap;
+            font-weight: 500;
+        }
+
+        .update-content h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1f2933;
+            margin-bottom: 4px;
+        }
+
+        .update-content p {
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.5;
+        }
+
+        .side-panel {
+            background: #f9fafb;
+            border-radius: 16px;
+            padding: 24px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .side-panel h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #1f2933;
+        }
+
+        .rank-list {
+            list-style: none;
+        }
+
+        .rank-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .rank-item:last-child {
+            border-bottom: none;
+        }
+
+        .rank-num {
+            width: 28px;
+            height: 28px;
+            background: #e5e7eb;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #4b5563;
+            font-size: 14px;
+        }
+
+        .rank-item:nth-child(1) .rank-num {
+            background: #f97316;
+            color: white;
+        }
+
+        .rank-item:nth-child(2) .rank-num {
+            background: #fb923c;
+            color: white;
+        }
+
+        .rank-item:nth-child(3) .rank-num {
+            background: #fdba74;
+            color: white;
+        }
+
+        .rank-name {
+            flex: 1;
+            font-weight: 500;
+            color: #1f2933;
+            font-size: 15px;
+        }
+
+        .rank-type {
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        /* 平台指南 */
+        .platform-section {
+            padding: 50px 0;
+        }
+
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .platform-card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px 20px;
+            text-align: center;
+            border: 1px solid #f0f0f0;
+            transition: all 0.3s ease;
+        }
+
+        .platform-card:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            transform: translateY(-3px);
+        }
+
+        .platform-icon {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .platform-card h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .platform-card p {
+            font-size: 14px;
+            color: #6b7280;
+            margin-bottom: 12px;
+        }
+
+        .platform-link {
+            font-size: 14px;
+            font-weight: 500;
+            color: #dc2626;
+        }
+
+        /* 游戏指南与FAQ */
+        .guide-section {
+            background: #f9fafb;
+            padding: 50px 0;
+        }
+
+        .guide-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .guide-content h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #1f2933;
+        }
+
+        .guide-content p {
+            color: #4b5563;
+            margin-bottom: 15px;
+        }
+
+        .guide-content ul {
+            padding-left: 20px;
+            color: #4b5563;
+            margin-bottom: 15px;
+        }
+
+        .guide-content li {
+            margin-bottom: 8px;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin-bottom: 15px;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: #1f2933;
+            margin-bottom: 6px;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .faq-question::before {
+            content: 'Q';
+            background: #f97316;
+            color: white;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+
+        .faq-answer {
+            color: #6b7280;
+            font-size: 15px;
+            padding-left: 30px;
+            line-height: 1.6;
+        }
+
+        /* 底部 */
+        .site-footer {
+            background: #0f172a;
+            color: #94a3b8;
+            padding: 40px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-about h3 {
+            color: white;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .footer-about p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .footer-col h4 {
+            color: white;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            border-top: 1px solid #1e293b;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #64748b;
+        }
+
+        /* 响应式 */
+        @media (max-width: 992px) {
+            .featured-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .platform-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .update-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .guide-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .header-search {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-wrap: wrap;
+                height: auto;
+                padding: 15px 0;
+                gap: 10px;
+            }
+
+            .main-nav {
+                order: 3;
+                width: 100%;
+                overflow-x: auto;
+            }
+
+            .main-nav ul {
+                gap: 20px;
+                padding-bottom: 5px;
+            }
+
+            .main-nav ul li a {
+                white-space: nowrap;
+                font-size: 15px;
+            }
+
+            .hero {
+                padding: 50px 0;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .featured-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .category-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .platform-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 15px;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .platform-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn-primary, .btn-outline {
+                text-align: center;
+            }
+        }
+    </style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <div class="logo-area">
+                <div class="logo-icon">A</div>
+                <div class="logo-text">冒险<span>游戏站</span></div>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">热门推荐</a></li>
+                    <li><a href="#">最新上架</a></li>
+                    <li><a href="#">单机冒险</a></li>
+                    <li><a href="#">联机冒险</a></li>
+                    <li><a href="#">游戏攻略</a></li>
+                </ul>
+            </nav>
+            <div class="header-search">
+                <input type="text" placeholder="搜索冒险游戏...">
+                <button type="button">搜索</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-tag">🔥 冒险游戏爱好者聚集地</span>
+                <h1>发现精彩冒险游戏，开启你的探索之旅</h1>
+                <p>从经典像素冒险到震撼的开放世界，从单人剧情解谜到多人合作探险，我们为您精心挑选和评测各类冒险游戏，助您快速找到心仪的作品。</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn-primary">查看热门榜单</a>
+                    <a href="#" class="btn-outline">探索游戏分类</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="category-section">
+        <div class="container">
+            <h2 class="section-title">游戏分类</h2>
+            <p class="section-subtitle">按风格和玩法探索冒险游戏世界</p>
+            <div class="category-grid">
+                <a href="#" class="category-card">
+                    <span class="category-icon">🗺️</span>
+                    <div class="category-name">开放世界</div>
+                    <div class="category-count">自由探索</div>
+                </a>
+                <a href="#" class="category-card">
+                    <span class="category-icon">🔍</span>
+                    <div class="category-name">解谜冒险</div>
+                    <div class="category-count">烧脑推理</div>
+                </a>
+                <a href="#" class="category-card">
+                    <span class="category-icon">⚔️</span>
+                    <div class="category-name">动作冒险</div>
+                    <div class="category-count">流畅战斗</div>
+                </a>
+                <a href="#" class="category-card">
+                    <span class="category-icon">👻</span>
+                    <div class="category-name">恐怖冒险</div>
+                    <div class="category-count">沉浸氛围</div>
+                </a>
+                <a href="#" class="category-card">
+                    <span class="category-icon">🤝</span>
+                    <div class="category-name">合作冒险</div>
+                    <div class="category-count">多人联机</div>
+                </a>
+                <a href="#" class="category-card">
+                    <span class="category-icon">👾</span>
+                    <div class="category-name">像素冒险</div>
+                    <div class="category-count">复古情怀</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-section">
+        <div class="container">
+            <h2 class="section-title">热门冒险游戏推荐</h2>
+            <p class="section-subtitle">近期玩家口碑最好的冒险游戏精选</p>
+            <div class="featured-grid">
+                <article class="game-card">
+                    <div class="game-thumbnail thumb-1">
+                        <span>🏔️</span>
+                        <span class="game-badge">开放世界</span>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">《原野传说：边界之旅》</h3>
+                        <div class="game-meta">
+                            <span>🎮 PC / PS5</span>
+                            <span>📅 2024年</span>
+                        </div>
+                        <p class="game-desc">广袤的开放世界，充满未知的遗迹与神秘生物。玩家将扮演一名边境探索者，在壮丽的自然景观中揭开古老文明留下的秘密。</p>
+                        <div class="game-rating">
+                            <span class="rating-stars">★★★★★</span>
+                            <span class="rating-score">9.2</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <div class="game-thumbnail thumb-2">
+                        <span>🔥</span>
+                        <span class="game-badge">动作冒险</span>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">《灰烬行者》</h3>
+                        <div class="game-meta">
+                            <span>🎮 PC / Xbox</span>
+                            <span>📅 2023年</span>
+                        </div>
+                        <p class="game-desc">后末日风格的硬核动作冒险游戏。在灰烬覆盖的世界中穿行，与变异生物战斗，体验感人至深的生存故事。</p>
+                        <div class="game-rating">
+                            <span class="rating-stars">★★★★☆</span>
+                            <span class="rating-score">8.7</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <div class="game-thumbnail thumb-3">
+                        <span>🌿</span>
+                        <span class="game-badge">解谜冒险</span>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">《失落丛林》</h3>
+                        <div class="game-meta">
+                            <span>🎮 Switch / PC</span>
+                            <span>📅 2024年</span>
+                        </div>
+                        <p class="game-desc">手绘艺术风格的精美解谜游戏。深入神秘丛林，通过环境互动和逻辑推理，解开失落的部落之谜。</p>
+                        <div class="game-rating">
+                            <span class="rating-stars">★★★★★</span>
+                            <span class="rating-score">9.0</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <div class="game-thumbnail thumb-4">
+                        <span>🌌</span>
+                        <span class="game-badge">剧情冒险</span>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">《星际漫游者》</h3>
+                        <div class="game-meta">
+                            <span>🎮 PC / PS5</span>
+                            <span>📅 2023年</span>
+                        </div>
+                        <p class="game-desc">太空题材的剧情冒险游戏，探索未知星系，与不同文明交流，做出影响整个银河命运的关键抉择。</p>
+                        <div class="game-rating">
+                            <span class="rating-stars">★★★★☆</span>
+                            <span class="rating-score">8.5</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <div class="game-thumbnail thumb-5">
+                        <span>🏯</span>
+                        <span class="game-badge">日式冒险</span>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">《御灵师》</h3>
+                        <div class="game-meta">
+                            <span>🎮 Switch / PC</span>
+                            <span>📅 2024年</span>
+                        </div>
+                        <p class="game-desc">以古代日本为背景的冒险RPG，收服并培养妖怪伙伴，探索充满神话色彩的世界，体验独特的和风剧情。</p>
+                        <div class="game-rating">
+                            <span class="rating-stars">★★★★☆</span>
+                            <span class="rating-score">8.8</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="game-card">
+                    <div class="game-thumbnail thumb-6">
+                        <span>🌊</span>
+                        <span class="game-badge">海底冒险</span>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">《深海回响》</h3>
+                        <div class="game-meta">
+                            <span>🎮 PC / Xbox</span>
+                            <span>📅 2024年</span>
+                        </div>
+                        <p class="game-desc">潜入神秘的海底世界，发现沉没文明的遗迹，与海洋生物互动，体验一场别开生面的水下冒险。</p>
+                        <div class="game-rating">
+                            <span class="rating-stars">★★★★☆</span>
+                            <span class="rating-score">8.6</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="update-section">
+        <div class="container">
+            <h2 class="section-title">最新动态</h2>
+            <p class="section-subtitle">冒险游戏界的最新消息与热门话题</p>
+            <div class="update-layout">
+                <div>
+                    <ul class="update-list">
+                        <li class="update-item">
+                            <span class="update-date">2025.02.20</span>
+                            <div class="update-content">
+                                <h3>《原野传说：边界之旅》大型DLC“冰封之境”正式公布</h3>
+                                <p>新区域、新任务以及全新机制即将上线，开发商确认将于下月推送免费更新。</p>
+                            </div>
+                        </li>
+                        <li class="update-item">
+                            <span class="update-date">2025.02.18</span>
+                            <div class="update-content">
+                                <h3>多人合作冒险游戏《遗迹守卫者》开启Beta测试</h3>
+                                <p>支持最多四人联机探险，目前已在Steam平台开放测试申请。</p>
+                            </div>
+                        </li>
+                        <li class="update-item">
+                            <span class="update-date">2025.02.15</span>
+                            <div class="update-content">
+                                <h3>经典冒险游戏《迷雾古城》高清重制版发售</h3>
+                                <p>重新打磨的画面与操作体验，保留原作精髓，现已登陆全平台。</p>
+                            </div>
+                        </li>
+                        <li class="update-item">
+                            <span class="update-date">2025.02.12</span>
+                            <div class="update-content">
+                                <h3>独立冒险游戏《纸片人奇遇记》获得年度创意奖</h3>
+                                <p>以独特的美术风格和创新的解谜机制赢得玩家与评委的一致好评。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <aside class="side-panel">
+                    <h3>📊 本周热门排行榜</h3>
+                    <ol class="rank-list">
+                        <li class="rank-item">
+                            <span class="rank-num">1</span>
+                            <span class="rank-name">原野传说：边界之旅</span>
+                            <span class="rank-type">开放世界</span>
+                        </li>
+                        <li class="rank-item">
+                            <span class="rank-num">2</span>
+                            <span class="rank-name">灰烬行者</span>
+                            <span class="rank-type">动作冒险</span>
+                        </li>
+                        <li class="rank-item">
+                            <span class="rank-num">3</span>
+                            <span class="rank-name">失落丛林</span>
+                            <span class="rank-type">解谜冒险</span>
+                        </li>
+                        <li class="rank-item">
+                            <span class="rank-num">4</span>
+                            <span class="rank-name">御灵师</span>
+                            <span class="rank-type">日式冒险</span>
+                        </li>
+                        <li class="rank-item">
+                            <span class="rank-num">5</span>
+                            <span class="rank-name">深海回响</span>
+                            <span class="rank-type">海底冒险</span>
+                        </li>
+                    </ol>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <section class="platform-section">
+        <div class="container">
+            <h2 class="section-title">选择你的冒险平台</h2>
+            <p class="section-subtitle">不同平台的冒险游戏各有特色，找到最适合你的方式</p>
+            <div class="platform-grid">
+                <div class="platform-card">
+                    <div class="platform-icon">🖥️</div>
+                    <h3>PC 平台</h3>
+                    <p>游戏库最丰富，MOD支持强大，适合追求画质和自由的玩家。</p>
+                    <a href="#" class="platform-link">查看PC游戏 →</a>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">🎮</div>
+                    <h3>主机平台</h3>
+                    <p>PS5、Xbox、Switch等主机拥有大量独占冒险大作。</p>
+                    <a href="#" class="platform-link">查看主机游戏 →</a>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">📱</div>
+                    <h3>手机平台</h3>
+                    <p>利用碎片时间体验轻量级冒险，随时随地开启探索。</p>
+                    <a href="#" class="platform-link">查看手游推荐 →</a>
+                </div>
+                <div class="platform-card">
+                    <div class="platform-icon">☁️</div>
+                    <h3>云游戏</h3>
+                    <p>无需高性能硬件，通过流媒体即可畅玩3A冒险大作。</p>
+                    <a href="#" class="platform-link">了解云游戏 →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="guide-section">
+        <div class="container">
+            <h2 class="section-title">冒险游戏入门指南</h2>
+            <p class="section-subtitle">无论新手还是老玩家，这里都有值得参考的内容</p>
+            <div class="guide-layout">
+                <div class="guide-content">
+                    <h3>如何选择适合自己的冒险游戏？</h3>
+                    <p>冒险游戏是一个十分宽泛的类别，涵盖从线性剧情到完全开放世界的各种玩法。挑选时可以从以下几个方面考虑：</p>
+                    <ul>
+                        <li><strong>玩法侧重：</strong>喜欢战斗还是解谜？喜欢剧情还是自由探索？明确自己的偏好能快速缩小范围。</li>
+                        <li><strong>游戏时长：</strong>开放世界类游戏通常需要40小时以上才能体验完整内容，而一些独立冒险游戏可能只需10小时左右。</li>
+                        <li><strong>难度设置：</strong>部分动作冒险类游戏对操作要求较高，建议新手从标准难度或提供辅助选项的游戏开始。</li>
+                        <li><strong>平台选择：</strong>确认游戏是否支持你的设备，或者考虑云游戏等灵活方式。</li>
+                    </ul>
+                    <p>如果不确定从哪里开始，可以先从一些口碑较好、类型均衡的作品入手，例如以探索为主的开放世界游戏或剧情驱动的经典冒险游戏。</p>
+                </div>
+                <div>
+                    <h3 style="font-size: 20px; font-weight: 700; margin-bottom: 15px; color: #1f2933;">常见问题</h3>
+                    <div class="faq-item">
+                        <div class="faq-question">冒险游戏和动作游戏有什么区别？</div>
+                        <div class="faq-answer">冒险游戏的核心在于探索、解谜和故事体验，而动作游戏更强调反应速度和战斗技巧。不过很多现代冒险游戏都融合了动作元素，边界并不绝对。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">哪些冒险游戏适合新手入门？</div>
+                        <div class="faq-answer">推荐从那些提供难度选项、引导完善且节奏适中的作品开始。一些经典的剧情冒险游戏也是很好的入门选择，它们不强调操作而注重故事和探索。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">玩冒险游戏需要高配置电脑吗？</div>
+                        <div class="faq-answer">这取决于具体游戏。许多独立冒险游戏对配置要求不高，集成显卡即可运行。但大型3D开放世界冒险游戏通常需要独立显卡和较好的CPU。</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>冒险游戏站</h3>
+                    <p>专注于冒险游戏领域的资讯与推荐平台。我们致力于为玩家提供准确、有价值的游戏信息，帮助每一位冒险者找到属于自己的精彩世界。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">热门推荐</a></li>
+                        <li><a href="#">最新上架</a></li>
+                        <li><a href="#">游戏排行</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>游戏分类</h4>
+                    <ul>
+                        <li><a href="#">开放世界</a></li>
+                        <li><a href="#">解谜冒险</a></li>
+                        <li><a href="#">动作冒险</a></li>
+                        <li><a href="#">合作冒险</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>友情链接</h4>
+                    <ul>
+                        <li><a href="#">游戏评测</a></li>
+                        <li><a href="#">攻略专区</a></li>
+                        <li><a href="#">玩家社区</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2025 冒险游戏站 All Rights Reserved. 本站内容仅供娱乐参考，请适度游戏，享受健康生活。</p>
+            </div>
+        </div>
+    </footer>
+</body>
+  </html>
